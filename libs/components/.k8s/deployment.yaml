@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $NX_TASK_TARGET_PROJECT
+  namespace: $BRANCH
+  labels:
+    app: $NX_TASK_TARGET_PROJECT
+spec:
+  selector:
+    matchLabels:
+      app: $NX_TASK_TARGET_PROJECT
+  template:
+    metadata:
+      labels:
+        app: $NX_TASK_TARGET_PROJECT
+    spec:
+      containers:
+        - name: $NX_TASK_TARGET_PROJECT
+          image: 535075449278.dkr.ecr.eu-central-1.amazonaws.com/rn2021:$NX_TASK_TARGET_PROJECT-$SHA
+          ports:
+            - containerPort: 3000

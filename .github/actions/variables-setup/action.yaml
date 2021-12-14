@@ -1,0 +1,17 @@
+name: 'Variables setup'
+description: 'Sets up environment variables for workflows'
+runs:
+  using: 'composite'
+  steps:
+    - name: Calculated variables
+      shell: bash
+      run: |
+        (
+          REF="${REF:-${GITHUB_REF_NAME}}"
+          SHA=${GITHUB_SHA::7}
+          BRANCH=${REF,,}
+          BRANCH=${BRANCH////-}
+
+          echo "SHA=${SHA}"
+          echo "BRANCH=${BRANCH}"
+        ) >> $GITHUB_ENV

@@ -2,6 +2,9 @@
   "name": "rn2021",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "url": "git@github.com:alonronin/rn2021.git"
+  },
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
@@ -72,4 +75,3 @@
     "url-loader": "^3.0.0"
   }
 }
-

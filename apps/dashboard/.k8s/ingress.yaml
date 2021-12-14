@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: $NX_TASK_TARGET_PROJECT
+  namespace: $BRANCH
+  labels:
+    app: $NX_TASK_TARGET_PROJECT
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  rules:
+    - host: $NX_TASK_TARGET_PROJECT.$BRANCH.rn2021.click
+      http:
+        paths:
+          - backend:
+              service:
+                name: $NX_TASK_TARGET_PROJECT
+                port:
+                  number: 80
+            pathType: Prefix
+            path: /
+
+  tls:
+    - hosts:
+        - '*.$BRANCH.rn2021.click'
+      secretName: $BRANCH-tls

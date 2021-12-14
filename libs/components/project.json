@@ -49,6 +49,27 @@
           "quiet": true
         }
       }
+    },
+    "docker": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "docker build -t 535075449278.dkr.ecr.eu-central-1.amazonaws.com/rn2021:$NX_TASK_TARGET_PROJECT-$SHA -f libs/$NX_TASK_TARGET_PROJECT/Dockerfile .",
+          "docker push 535075449278.dkr.ecr.eu-central-1.amazonaws.com/rn2021:$NX_TASK_TARGET_PROJECT-$SHA"
+        ],
+        "parallel": false
+      }
+    },
+    "k8s": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "mkdir -p dist/.k8s",
+          "for file in libs/$NX_TASK_TARGET_PROJECT/.k8s/*.yaml; do cat $file | envsubst; echo ---; done > dist/.k8s/$NX_TASK_TARGET_PROJECT.yaml",
+          "cat dist/.k8s/$NX_TASK_TARGET_PROJECT.yaml"
+        ],
+        "parallel": false
+      }
     }
   }
 }
