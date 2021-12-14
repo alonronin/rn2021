@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "dashboard": "apps/dashboard",
+    "dashboard-e2e": "apps/dashboard-e2e"
+  }
+}
