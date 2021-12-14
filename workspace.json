@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "components": "libs/components",
     "dashboard": "apps/dashboard",
-    "dashboard-e2e": "apps/dashboard-e2e"
+    "dashboard-e2e": "apps/dashboard-e2e",
+    "tailwind": "libs/tailwind"
   }
 }
