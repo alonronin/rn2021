@@ -2,6 +2,14 @@
 
 # Rn2021
 
+The repo I uses for my React Next 2021 Talk.
+
+Also check out the blog post:
+https://medium.com/@alonronin/0-to-production-in-30-minutes-9716b89e0668
+
+And a detailed guide one k8s cluster setup:
+https://medium.com/@alonronin/setup-eks-cluster-with-pulumi-and-helm-bdba8fa5d419
+
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
