@@ -7,7 +7,7 @@ The repo I used for my React Next 2021 Talk.
 Also check out the blog post:
 https://medium.com/@alonronin/0-to-production-in-30-minutes-9716b89e0668
 
-And a detailed guide one k8s cluster setup:
+And a detailed guide on k8s cluster setup:
 https://medium.com/@alonronin/setup-eks-cluster-with-pulumi-and-helm-bdba8fa5d419
 
 This project was generated using [Nx](https://nx.dev).
