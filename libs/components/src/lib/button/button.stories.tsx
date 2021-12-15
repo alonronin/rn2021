@@ -9,6 +9,4 @@ export default {
 const Template: Story = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  children: 'CLick',
-};
+Primary.args = {};
