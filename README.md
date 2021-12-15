@@ -2,7 +2,7 @@
 
 # Rn2021
 
-The repo I uses for my React Next 2021 Talk.
+The repo I used for my React Next 2021 Talk.
 
 Also check out the blog post:
 https://medium.com/@alonronin/0-to-production-in-30-minutes-9716b89e0668
